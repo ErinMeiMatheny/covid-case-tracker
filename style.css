@@ -1,0 +1,124 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+       /* ID's CSS */
+       
+       #container{
+        height: 100%;
+        width: 100%;
+      }
+      
+      #map {
+       height: 100%;
+     }
+
+     #topTenConfirmed{
+       height:100%;
+     }
+
+     #renderData{
+       height: 100%;
+     }
+     
+     #worldTotal{
+       height:100%;
+     }
+
+     #search{
+       float:right;
+     }
+
+     .dash{
+       padding: 10px;
+     }
+     
+     /* Optional: Makes the sample page fill the window. */
+     html,
+     body {
+       height: 100%;
+       margin: 0;
+       padding: 0;
+     }
+
+
+/* W3 Styles */
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+ /* CSS */
+
+ .mapH {
+  height: 400px;
+}
+
+.chartH {
+  height: 400px;
+}
+
+  .size {
+   font-size: x-large;
+   color: #000;
+ }  
+
+.navbar-dark .navbar-nav .nav-link {
+  color: black;
+}
+
+.border-4 {
+  border-width:4px !important;
+}
+.border-3 {
+  border-bottom-width:3px !important;
+}
+
+.margT {
+  margin-top: 200px;
+}
+
+
+
+/* Responsive CSS */
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .borderW {
+    border: 2px rgb(72, 184, 72) solid !important
+  }
+  .borderR {
+    border-right: 3px rgb(72, 184, 72) solid !important
+ 
+ }
+ .searchM {
+   margin-right: 10px;
+ }
+ .dashM {
+  margin-left: 8px;
+}
+.mapH {
+  height: 300px;
+}
+.chartH {
+ width: 500px;
+ padding-left: 7px;
+ padding-right: 7px;
+}
+.small {
+  width: 200px;
+  margin-right: 5px;
+}
+.dash {
+ padding: 0;
+}
+
+}
+
+      

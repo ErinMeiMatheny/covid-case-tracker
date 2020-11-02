@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Head -->
+<title>Covid Case Tracker</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOntje_nb9MDRE2p9-b6H2uBtqwSDCT0g&callback=initMap&libraries=&v=weekly"
+    defer></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+
+<!-- Top container -->
+
+<body class="w3-light-grey"></body>
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i
+            class="fa fa-bars"></i> Top 10</button>
+
+    <nav class="navbar navbar-expand-lg bg-success border-bottom border-dark border-3 ">
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#"><img src="img/eyetrack1.png" height="55" width="65"></a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link font-weight-bold size" href="#">Covid19-Tracker <span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
+
+<!-- Side Bar -->
+<nav class="borderR w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="w3-container w3-row">
+    </div>
+    <hr class="border-top border-success border-2">
+    <div class="w3-container">
+        <h5>Top Ten Countries</h5>
+    </div>
+    <div class="w3-bar-block border border-success borderW">
+        <div id='topTenConfirmed'>
+            <canvas id="topConfirmed" width="800" height="600"></canvas>
+        </div>
+    </div>
+</nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+    title="close side menu" id="myOverlay"></div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main border-left border-success border-3" style="margin-left:300px;margin-top:43px;">
+    <!-- Header -->
+    <header class="dashM w3-container dash" style="padding-top:62px">
+        <h5><b><i class="fa fa-dashboard"></i> Dashboard</b></h5>
+
+        <div id='search' class="form-inline my-2 my-lg-0">
+            <input id="countrySearch" class="small form-control mr-sm-2 border-dark" type="search" placeholder="Enter Country"
+                aria-label="Search">
+            <button id="searchButton" class="btn btn-outline-black bg-white border-dark my-2 my-sm-0 font-weight-bold"
+                type="button">Search</button>
+            <button id="toggleCircles" class="searchM btn btn-outline-black bg-white border-dark my-2 my-sm-0 font-weight-bold ml-2"
+            type="button">Hide All</button>
+        </div>
+    </header>
+    <!-- Map -->
+    <div class="w3-row-padding w3-margin-bottom mapH">
+        <div id="map" class='col-lg-12 border border-success border-4'>
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Cards-->
+    <div class="w3-container chartH">
+        <div class="card-deck h-100">
+            <div class="card">
+                <div class="card-header border border-success borderW">
+                    Search Results
+                </div>
+                <div class="card-body border border-success borderW">
+                    <canvas id="searchedTotals"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header border border-success borderW">
+                    Global Totals
+                </div>
+                <div id="worldTotal" class="card-body border border-success borderW">
+                    <canvas id="grandTotals"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End page content -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="app.js"></script>
+    <script src="responsive.js"></script>
+
+    </body>
+
+</html>
